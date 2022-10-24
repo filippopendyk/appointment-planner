@@ -22,12 +22,25 @@ function App() {
   contacts and appointments
   */
 
-  const addAppointment = (appointment) => {
-    setAppointments(prev => [...prev, appointment]);
+  const addAppointment = (title, contact, date, time) => {
+    const newAppointment = {
+      title: title,
+      contact: contact,
+      date: date,
+      time: time
+    };
+
+    setAppointments(prev => [...prev, newAppointment]);
   }
 
-  const addContact = (contact) => {
-    setContacts(prev => [...prev, contact]);
+  const addContact = (name, phoneNumber, email) => {
+    const newContact = {
+      name: name,
+      phoneNumber: phoneNumber,
+      email: email
+    };
+
+    setContacts(prev => [...prev, newContact]);
   }
 
   return (
