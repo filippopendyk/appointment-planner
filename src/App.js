@@ -41,8 +41,8 @@ function App() {
       <Navbar/>
       <main>
         <Routes>
-          <Route index element={<ContactsPage/>}/>
-          <Route path="contacts" element={<ContactsPage/>}/>
+          <Route index element={<ContactsPage addContact={addContact} contacts={contacts}/>}/>
+          <Route path="contacts" element={<ContactsPage addContact={addContact} contacts={contacts}/>}/>
           <Route path="appointments" element={<AppointmentsPage/>}/>  
         </Routes> 
       </main>
