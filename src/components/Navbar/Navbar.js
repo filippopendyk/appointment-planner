@@ -12,9 +12,6 @@ const Navbar = () => {
         <nav>
                     <NavLink
                         to="contacts"
-                        style={({ isActive}) => 
-                            isActive ? activeStyle : undefined
-                        }
                         >
                         Contacts
                         </NavLink>

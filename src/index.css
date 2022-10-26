@@ -12,6 +12,10 @@ nav > a {
   text-decoration-line: none;
 }
 
+nav > a.active {
+  text-decoration-line: underline;
+}
+
 nav {
   padding-bottom: 20px;
   border-bottom: 1px solid #979797;
@@ -24,6 +28,9 @@ h2 {
   color: #000000;
   margin: 0;
   margin-bottom: 18px;
+}
+
+section {
 }
 
 hr {
