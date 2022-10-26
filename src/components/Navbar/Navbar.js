@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "../../index.css";
 
 const Navbar = () => {
 
@@ -9,8 +10,6 @@ const Navbar = () => {
 
     return (
         <nav>
-            <ul>
-                <li>
                     <NavLink
                         to="contacts"
                         style={({ isActive}) => 
@@ -19,8 +18,6 @@ const Navbar = () => {
                         >
                         Contacts
                         </NavLink>
-                </li>
-            </ul>
         </nav>
     )
 
