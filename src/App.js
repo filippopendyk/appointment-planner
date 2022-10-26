@@ -43,7 +43,7 @@ function App() {
         <Routes>
           <Route index element={<ContactsPage addContact={addContact} contacts={contacts}/>}/>
           <Route path="contacts" element={<ContactsPage addContact={addContact} contacts={contacts}/>}/>
-          <Route path="appointments" element={<AppointmentsPage/>}/>  
+          <Route path="appointments" element={<AppointmentsPage appointments={appointments} contacts={contacts} addAppointment={addAppointment}/>}/>  
         </Routes> 
       </main>
     </BrowserRouter>
