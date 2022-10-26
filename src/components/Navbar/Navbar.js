@@ -10,11 +10,8 @@ const Navbar = () => {
 
     return (
         <nav>
-                    <NavLink
-                        to="contacts"
-                        >
-                        Contacts
-                        </NavLink>
+            <NavLink to="contacts"> Contacts </NavLink>
+            <NavLink to="appointments"> Appointments </NavLink>
         </nav>
     )
 
