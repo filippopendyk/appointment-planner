@@ -25,7 +25,10 @@ const AppointmentForm = ({
 
   const handleDateChange = (e) => {
     setDate(e.target.value);
-    console.log(date);  
+  }
+
+  const handleTimeChange = (e) => {
+    setTime(e.target.value);
   }
 
   return (
@@ -33,7 +36,15 @@ const AppointmentForm = ({
       <label>Title: </label>
       <input type="text" value={title} onChange={handleTitleChange}/>
       <label>Date: </label>
-      <input type="date" id="date" min={getTodayString()} onChange={handleDateChange}/>
+      <input type="date" min={getTodayString()} onChange={handleDateChange}/>
+      <label>Time: </label>
+      <input type="time" onChange={handleTimeChange}/>
+      <label>Contact: </label>
+      <select>
+        {contacts.map((contact,index) => {
+          return <option key={index} value={contact.name}>{contact.name}</option>;
+        })}
+      </select>
     </form>
   );
 };
