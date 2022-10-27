@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import AppointmentForm from "../../components/AppointmentForm/AppointmentForm";
 
 export const AppointmentsPage = ({appointments, contacts, addApointment}) => {
   /*
@@ -27,6 +28,7 @@ export const AppointmentsPage = ({appointments, contacts, addApointment}) => {
     <div>
       <section>
         <h2>Add Appointment</h2>
+        <AppointmentForm setTime={setTime} setContact={setContact} setDate={setDate} setTitle={setTitle}/>
       </section>
       <hr />
       <section>

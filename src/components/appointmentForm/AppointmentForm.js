@@ -1,6 +1,6 @@
 import React from "react";
-
-export const AppointmentForm = ({
+ 
+const AppointmentForm = ({
   contacts,
   title,
   setTitle,
@@ -19,7 +19,16 @@ export const AppointmentForm = ({
     return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
   };
 
+  const handleTitleChange = (e) => {
+    setTitle(e.target.value);
+  }
+
   return (
-    AppointmentForm
+    <form>
+      <label>Title: </label>
+      <input type="text" value={title} onChange={handleTitleChange}/>
+    </form>
   );
 };
+
+export default AppointmentForm;
