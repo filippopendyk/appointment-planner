@@ -31,20 +31,29 @@ const AppointmentForm = ({
     setTime(e.target.value);
   }
 
+  const handleContactChange = (e) => {
+    setContact(e.target.value);
+  }
+
   return (
-    <form>
+    <form
+      onSubmit={handleSubmit}>
       <label>Title: </label>
       <input type="text" value={title} onChange={handleTitleChange}/>
       <label>Date: </label>
-      <input type="date" min={getTodayString()} onChange={handleDateChange}/>
+      <input value={date} type="date" min={getTodayString()} onChange={handleDateChange}/>
       <label>Time: </label>
-      <input type="time" onChange={handleTimeChange}/>
+      <input type="time" value={time} onChange={handleTimeChange}/>
       <label>Contact: </label>
-      <select>
+      <select
+        value={contact}
+        onChange={handleContactChange}>
+        <option key={"default"} value={""}></option>
         {contacts.map((contact,index) => {
           return <option key={index} value={contact.name}>{contact.name}</option>;
         })}
       </select>
+      <input type="submit" value="Submit"/>
     </form>
   );
 };

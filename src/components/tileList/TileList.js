@@ -1,5 +1,5 @@
 import React from "react";
-import { Tile } from "../tile/Tile";
+import { Tile } from "../Tile/Tile";
 
 const TileList = (props) => {
   const array = props.arrayToRender;

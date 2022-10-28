@@ -4,10 +4,6 @@ import "../../index.css";
 
 const Navbar = () => {
 
-    let activeStyle = {
-        textDecoration: "underline",
-    }
-
     return (
         <nav>
             <NavLink to="contacts"> Contacts </NavLink>
